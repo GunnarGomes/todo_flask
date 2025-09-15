@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do inicial</title>
+</head>
+<body>
+    {% if todo %}
+    <ul>
+        {% for tasks in todo %}
+                <h1>{{ tasks.titulo }}</h1>
+                <li>{{ tasks.descricao }}</li>
+           
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h1>Não há tarefas</h1>
+    {% endif %}
+
+    <div class="container__create_task">
+        <form action={{ url_for('bp_todo.Create_task',projeto_id=projeto_id)}} method="post">
+            <input type="text" id="titulo" name="titulo" placeholder="titulo">
+            <input type="text" id="descricao" name="descricao" placeholder="descricao">
+            <button type="submit">adicionar</button>
+        </form>
+    </div>
+</body>
+</html>

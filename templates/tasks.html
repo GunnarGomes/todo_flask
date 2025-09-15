@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasks</title>
+</head>
+<body>
+    <h1>tasks</h1>
+    
+    <ul>
+        {% for projeto in projetos %}
+           <li><a href={{url_for("bp_todo.Todo",id_projeto=projeto.id)}}>{{projeto.titulo}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
