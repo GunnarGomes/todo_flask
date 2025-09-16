@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>tasks</title>
 </head>
 <body>
     <h1>tasks</h1>
+    <!-- TODO formulario para criar uma tarefa -->
+     <div>
+        <form action="{{ url_for('bp_todo.Create_project',projeto_id=projeto_id) }}" method="post">
+            <input type="text" id="titulo" name="titulo" placeholder="titulo">
+            <button type="submit">adicionar</button>
+        </form>
+     </div>
     
     <ul>
         {% for projeto in projetos %}

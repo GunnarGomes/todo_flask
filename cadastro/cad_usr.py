@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash
 Session = sessionmaker(bind=engine)
 session = Session()
 
-bp_cadastro_usuario = Blueprint("bp_cadastro_usuario",__name__,template_folder="templates")
+bp_cadastro_usuario = Blueprint("bp_cadastro_usuario",__name__,template_folder="templates",static_folder="static")
 
 @bp_cadastro_usuario.route("/cadastro")
 def Cadastro_view():

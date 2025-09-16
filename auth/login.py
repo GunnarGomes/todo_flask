@@ -7,7 +7,7 @@ from werkzeug.security import check_password_hash
 Session = sessionmaker(bind=engine)
 session = Session()
 
-bp_login = Blueprint("bp_login", __name__, template_folder="templates")
+bp_login = Blueprint("bp_login", __name__, template_folder="templates",static_folder="static")
 
 @bp_login.route("/login", methods=["GET","POST"])
 def Login():
