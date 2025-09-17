@@ -11,7 +11,7 @@
         <form action={{ url_for('bp_todo.Create_task',projeto_id=projeto_id)}} method="post">
             <input type="text" id="titulo" name="titulo" placeholder="titulo">
             <input type="text" id="descricao" name="descricao" placeholder="descricao">
-            <button type="submit">adicionar</button>
+            <button type="submit" id="btn_submit">adicionar</button>
         </form>
     </div>
     {% if todo %}
