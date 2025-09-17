@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tasks.css') }}">
     <title>tasks</title>
 </head>
 <body>
     <h1>tasks</h1>
-    <!-- TODO formulario para criar uma tarefa -->
+
      <div>
         <form action="{{ url_for('bp_todo.Create_project',projeto_id=projeto_id) }}" method="post">
             <input type="text" id="titulo" name="titulo" placeholder="titulo">
@@ -18,7 +18,7 @@
     
     <ul>
         {% for projeto in projetos %}
-           <li><a href={{url_for("bp_todo.Todo",id_projeto=projeto.id)}}>{{projeto.titulo}}</a></li>
+           <li><a class="link_projeto" href={{url_for("bp_todo.Todo",id_projeto=projeto.id)}}>{{projeto.titulo}}</a></li>
         {% endfor %}
     </ul>
 </body>

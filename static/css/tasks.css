@@ -1,0 +1,27 @@
+@import url("styles.css");
+
+ul {
+    list-style: none;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* espaçamento maior entre os itens */
+}
+.link_projeto {
+    display: block;
+    padding: 0.8rem 1rem;
+    background: #f4f4f4;
+    border-left: 5px solid #f36303;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0e0d0d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link_projeto:hover {
+    background: #e25f08;
+    color: #f3f0f0;
+    border-left-color: #0c0c0c;
+}
