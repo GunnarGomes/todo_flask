@@ -26,4 +26,4 @@ def Cadastrar():
     new_usr = Usuario(nome=nome,email=email,senha=senha_hash)
     session.add(new_usr)
     session.commit()
-    return "Cadastro feito com sucesso"
+    return redirect("/login")

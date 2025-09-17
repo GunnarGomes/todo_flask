@@ -30,6 +30,7 @@ def Logar():
         })
         resp = make_response(redirect("/tasks"))
         set_access_cookies(resp, token)  # salva o JWT num cookie HttpOnly
+        
         return resp
         
     else:
